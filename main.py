@@ -8,7 +8,9 @@ app = FastAPI(title="Student CRUD API", description="A simple FastAPI project de
 @app.get("/")
 def home():
     """Return a welcome message for the Student CRUD API."""
-    return {"message":"Welcome to FastAPI project that shows CRUD operation."}
+    return {"message":"Welcome to FastAPI project that shows CRUD operation.",
+            "Swagger_UI":"https://fastapi-student-crud-3tpn.onrender.com/docs",
+            "ReDoc_UI":"https://fastapi-student-crud-3tpn.onrender.com/redoc"}
 
 # 2. View All Students Data
 @app.get("/students", response_model=list[StudentSchema])
